@@ -18,7 +18,7 @@ namespace RPSLS
             
             WelcomeMsg();
             numOfPlyers();
-            HowManyGamesToPlay();
+            ChooseTypeOfSeries();
         }
 
         
@@ -78,7 +78,7 @@ namespace RPSLS
 
         }
 
-        public void HowManyGamesToPlay()
+        public void ChooseTypeOfSeries()
         {
             string userInputText;
             int userNumOfGameChoice;
@@ -117,6 +117,11 @@ namespace RPSLS
                     break;
             }
 
+
+        }
+
+        public void CompareGestures()
+        {
 
         }
 

@@ -17,6 +17,7 @@ namespace RPSLS
         {
             
             WelcomeMsg();
+            numOfPlyers();
             HowManyGamesToPlay();
         }
 
@@ -41,7 +42,41 @@ namespace RPSLS
             Console.ReadLine();
             Console.Clear();
         }
+        
 
+        public void numOfPlyers()
+        {
+            string userInputText;
+            int userNumOfPlayers;
+
+
+            Console.WriteLine("How many user controlled players are there - 1 or 2?");
+            userInputText = Console.ReadLine();
+            bool isValidNum = int.TryParse(userInputText, out userNumOfPlayers);
+
+            while ((isValidNum == false || userNumOfPlayers != 1) && (isValidNum == false || userNumOfPlayers != 2))
+            {
+                Console.WriteLine("You did not enter a valid number of players. PLEASE choose 1 or 2!");
+                userInputText = Console.ReadLine();
+                isValidNum = int.TryParse(userInputText, out userNumOfPlayers);
+            }
+
+            if (userNumOfPlayers == 1)
+            {
+                playerOne = new Human();
+                playerTwo = new AI();
+            }
+            else
+            {
+                playerOne = new Human();
+                playerTwo = new Human();
+            }
+
+            Console.WriteLine($"Welcome to the game {playerOne.name} and {playerTwo.name}.");
+            Console.WriteLine("***********************************************************");
+            Console.WriteLine();
+
+        }
 
         public void HowManyGamesToPlay()
         {

@@ -8,6 +8,7 @@ namespace RPSLS
 {
     public abstract class Player
     {
+        
         public string name;
         public int score;
         public string gestureUserChose;
@@ -16,6 +17,7 @@ namespace RPSLS
         public Player()
         {
             ListOfGestures();
+            score = 0;
             
         }
 

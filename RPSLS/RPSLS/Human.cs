@@ -16,8 +16,11 @@ namespace RPSLS
 
         public override void PlayerName()
         {
-            Console.WriteLine("What will this player's name be?: ");
-            name = Console.ReadLine();
+            
+                Console.WriteLine("What will this user's name be?: ");
+                name = Console.ReadLine();
+
+            
         }
 
 

@@ -36,10 +36,13 @@ namespace RPSLS
 
 
         public abstract void PlayerName();
-
         public abstract int ChooseGesture();
-       
 
+
+
+
+
+        
 
     }
 }

@@ -11,6 +11,7 @@ namespace RPSLS
         public Player playerOne;
         public Player playerTwo;
         public int numOfGamesToPlay;
+        public bool gameOver;
 
         
         public void RunGame()
@@ -19,6 +20,12 @@ namespace RPSLS
             WelcomeMsg();
             numOfPlyers();
             ChooseTypeOfSeries();
+
+            while (gameOver!= true)
+            {
+                CompareGestures();
+                DisplayWinner();
+            }
         }
 
         
@@ -117,13 +124,138 @@ namespace RPSLS
                     break;
             }
 
+            Console.WriteLine("***********************************************************");
+            Console.WriteLine();
 
         }
+
+
 
         public void CompareGestures()
         {
+            int playerOneNumChoice = 0;
+            playerOneNumChoice = playerOne.ChooseGesture();
+            int playerTwoNumChoice = 0;
+            playerTwoNumChoice = playerTwo.ChooseGesture();
+
+            Console.WriteLine("***********************************************************");
+            Console.WriteLine();
+
+            //Player Gesture Conditions in order of (WIN, LOSS, TIE) | 3 for every Gesture
+            if (playerOneNumChoice == 0 && (playerTwoNumChoice == 2 || playerTwoNumChoice == 3))
+            {
+                playerOne.score++;
+                Console.WriteLine($"{playerOne.name} wins this round!");
+            }
+            else if (playerOneNumChoice == 0 && (playerTwoNumChoice == 1 || playerTwoNumChoice == 4))
+            {
+                playerTwo.score++;
+                Console.WriteLine($"{playerTwo.name} wins this round!");
+            }
+            else if (playerOneNumChoice == 0 && playerTwoNumChoice == 0)
+            {
+                Console.WriteLine($"Woah...it's a TIE! No points awarded this round!");
+            }
+            else if (playerOneNumChoice == 1 && (playerTwoNumChoice == 0 || playerTwoNumChoice == 4))
+            {
+                playerOne.score++;
+                Console.WriteLine($"{playerOne.name} wins this round!");
+            }
+            else if (playerOneNumChoice == 1 && (playerTwoNumChoice == 2 || playerTwoNumChoice == 3))
+            {
+                playerTwo.score++;
+                Console.WriteLine($"{playerTwo.name} wins this round!");
+            }
+            else if (playerOneNumChoice == 1 && playerTwoNumChoice == 1)
+            {
+                Console.WriteLine($"Woah...it's a TIE! No points awarded this round!");
+            }
+            else if (playerOneNumChoice == 2 && (playerTwoNumChoice == 1 || playerTwoNumChoice == 3))
+            {
+                playerOne.score++;
+                Console.WriteLine($"{playerOne.name} wins this round!");
+            }
+            else if (playerOneNumChoice == 2 && (playerTwoNumChoice == 0 || playerTwoNumChoice == 4))
+            {
+                playerTwo.score++;
+                Console.WriteLine($"{playerTwo.name} wins this round!");
+            }
+            else if (playerOneNumChoice == 2 && playerTwoNumChoice == 2)
+            {
+                Console.WriteLine($"Woah...it's a TIE! No points awarded this round!");
+            }
+            else if (playerOneNumChoice == 3 && (playerTwoNumChoice == 1 || playerTwoNumChoice == 4))
+            {
+                playerOne.score++;
+                Console.WriteLine($"{playerOne.name} wins this round!");
+            }
+            else if (playerOneNumChoice == 3 && (playerTwoNumChoice == 0 || playerTwoNumChoice == 2))
+            {
+                playerTwo.score++;
+                Console.WriteLine($"{playerTwo.name} wins this round!");
+            }
+            else if (playerOneNumChoice == 3 && playerTwoNumChoice == 3)
+            {
+                Console.WriteLine($"Woah...it's a TIE! No points awarded this round!");
+            }
+            else if (playerOneNumChoice == 4 && (playerTwoNumChoice == 0 || playerTwoNumChoice == 2))
+            {
+                playerOne.score++;
+                Console.WriteLine($"{playerOne.name} wins this round!");
+            }
+            else if (playerOneNumChoice == 4 && (playerTwoNumChoice == 1 || playerTwoNumChoice == 3))
+            {
+                playerTwo.score++;
+                Console.WriteLine($"{playerTwo.name} wins this round!");
+            }
+            else if (playerOneNumChoice == 4 && playerTwoNumChoice == 4)
+            {
+                Console.WriteLine($"Woah...it's a TIE! No points awarded this round!");
+            }
+
 
         }
 
+        public void DisplayWinner()
+        {
+            if (numOfGamesToPlay == 0 && playerOne.score == 2)
+            {
+                Console.WriteLine($"{playerOne.name} is the winner of this series!" );
+                gameOver = true;
+            }
+            else if (numOfGamesToPlay == 0 && playerTwo.score == 2)
+            {
+                Console.WriteLine($"{playerTwo.name} is the winner of this series!");
+                gameOver = true;
+            }
+            else if (numOfGamesToPlay == 1 && playerOne.score == 3)
+            {
+                Console.WriteLine($"{playerOne.name} is the winner of this series!");
+                gameOver = true;
+            }
+            else if (numOfGamesToPlay == 1 && playerTwo.score == 3)
+            {
+                Console.WriteLine($"{playerTwo.name} is the winner of this series!");
+                gameOver = true;
+            }
+            else if (numOfGamesToPlay == 2 && playerOne.score == 4)
+            {
+                Console.WriteLine($"{playerOne.name} is the winner of this series!");
+                gameOver = true;
+            }
+            else if (numOfGamesToPlay == 2 && playerTwo.score == 4)
+            {
+                Console.WriteLine($"{playerTwo.name} is the winner of this series!");
+                gameOver = true;
+            }
+            else
+            {
+                Console.WriteLine($"The series is currently {playerOne.name}: {playerOne.score} | {playerTwo.name}: {playerTwo.score}" );
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("***********************************************************");
+            Console.WriteLine();
+        }
     }
 }

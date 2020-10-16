@@ -13,5 +13,31 @@ namespace RPSLS
         public string gestureUserChose;
         List<string> gestures;
 
+        public Player()
+        {
+            ListOfGestures();
+            
+        }
+
+        
+        public void ListOfGestures()
+        {
+            
+
+            gestures = new List<string>();
+            gestures.Add("Rock");
+            gestures.Add("Paper");
+            gestures.Add("Scissors");
+            gestures.Add("Lizard");
+            gestures.Add("Spock");
+        }
+
+
+        public abstract void PlayerName();
+
+        public abstract int ChooseGesture();
+       
+
+
     }
 }

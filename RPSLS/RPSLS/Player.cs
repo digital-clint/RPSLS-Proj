@@ -18,7 +18,7 @@ namespace RPSLS
         {
             ListOfGestures();
             score = 0;
-            
+    
         }
 
         

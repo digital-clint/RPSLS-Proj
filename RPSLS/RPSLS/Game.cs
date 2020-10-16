@@ -26,6 +26,9 @@ namespace RPSLS
                 CompareGestures();
                 DisplayWinner();
             }
+
+            PlayAgain();
+
         }
 
         
@@ -257,5 +260,22 @@ namespace RPSLS
             Console.WriteLine("***********************************************************");
             Console.WriteLine();
         }
+
+        public void PlayAgain()
+        {
+            Console.WriteLine("Do you want to play again? Y or N");
+            string playAgainText = Console.ReadLine();
+            if (playAgainText.ToLower() == "y" || playAgainText.ToLower() == "yes")
+            {
+                gameOver = false;
+                RunGame();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Hope you Enjoyed the Game!");
+            }
+        }
+
     }
 }

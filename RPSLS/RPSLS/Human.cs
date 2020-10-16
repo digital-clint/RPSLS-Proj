@@ -30,7 +30,7 @@ namespace RPSLS
             int userNumOfGesture;
 
             Console.WriteLine("ENTER the number of the gesture you would like to use: ");
-            Console.WriteLine("0) Rock \n1) Paper \n2) Scissors \n3) Lizard \n4) Spock");
+            Console.WriteLine($"0) Rock \n1) Paper \n2) Scissors \n3) Lizard \n4) Spock");
             userInputText = Console.ReadLine();
             bool isValidNum = int.TryParse(userInputText, out userNumOfGesture);
 
@@ -42,7 +42,8 @@ namespace RPSLS
                 userInputText = Console.ReadLine();
                 isValidNum = int.TryParse(userInputText, out userNumOfGesture);
             }
-
+            
+           
             return userNumOfGesture;
         }
 

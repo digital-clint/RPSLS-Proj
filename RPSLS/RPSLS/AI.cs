@@ -20,6 +20,9 @@ namespace RPSLS
             Random randomNum = new Random();
             name = randomNamesForAI[randomNum.Next(0, 3)];
             Console.WriteLine($"The computer's name is {name}.");
+            Console.WriteLine("///////////////////////////////////////");
+            Console.WriteLine();
+            Console.WriteLine();
         }
 
         public override int ChooseGesture()

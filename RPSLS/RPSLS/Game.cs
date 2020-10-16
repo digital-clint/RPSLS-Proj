@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Program
+    class Game
     {
-        static void Main(string[] args)
-        {
-            
-            Console.ReadLine();
-        }
+        public Player playerOne;
+        public Player playerTwo;
+
+
+        
+        
+
+
     }
 }

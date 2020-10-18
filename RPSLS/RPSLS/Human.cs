@@ -38,7 +38,7 @@ namespace RPSLS
                   && (isValidNum == false || userNumOfGesture != 3) && (isValidNum == false || userNumOfGesture != 4))
             {
                 Console.WriteLine("You did not enter a valid number to choose gesture. PLEASE choose 0, 1, 2, 3 or 4!");
-                Console.WriteLine("0) Rock \n1)Paper \n2) Scissors \n3) Lizard \n4) Spock");
+                Console.WriteLine("0) Rock \n1) Paper \n2) Scissors \n3) Lizard \n4) Spock");
                 userInputText = Console.ReadLine();
                 isValidNum = int.TryParse(userInputText, out userNumOfGesture);
             }

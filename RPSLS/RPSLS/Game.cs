@@ -148,11 +148,16 @@ namespace RPSLS
             if (playerOneNumChoice == 0 && (playerTwoNumChoice == 2 || playerTwoNumChoice == 3))
             {
                 playerOne.score++;
+
+                Console.WriteLine($"{playerOne.gestures[0]} crushes {playerTwo.gestures[2]} and {playerTwo.gestures[3]}!");
+                Console.WriteLine();
                 Console.WriteLine($"{playerOne.name} wins this round!");
             }
             else if (playerOneNumChoice == 0 && (playerTwoNumChoice == 1 || playerTwoNumChoice == 4))
             {
                 playerTwo.score++;
+                Console.WriteLine($"{playerTwo.name} knows {playerOne.gestures[0]} is no match for {playerTwo.gestures[1]} or {playerTwo.gestures[4]}...");
+                Console.WriteLine();
                 Console.WriteLine($"{playerTwo.name} wins this round!");
             }
             else if (playerOneNumChoice == 0 && playerTwoNumChoice == 0)
@@ -162,11 +167,15 @@ namespace RPSLS
             else if (playerOneNumChoice == 1 && (playerTwoNumChoice == 0 || playerTwoNumChoice == 4))
             {
                 playerOne.score++;
+                Console.WriteLine($"{playerOne.gestures[1]} covers {playerTwo.gestures[0]} and disproves {playerTwo.gestures[4]}!");
+                Console.WriteLine();
                 Console.WriteLine($"{playerOne.name} wins this round!");
             }
             else if (playerOneNumChoice == 1 && (playerTwoNumChoice == 2 || playerTwoNumChoice == 3))
             {
                 playerTwo.score++;
+                Console.WriteLine($"{playerTwo.name} knows {playerOne.gestures[1]} is no match for {playerTwo.gestures[2]} or {playerTwo.gestures[3]}...");
+                Console.WriteLine();
                 Console.WriteLine($"{playerTwo.name} wins this round!");
             }
             else if (playerOneNumChoice == 1 && playerTwoNumChoice == 1)
@@ -176,11 +185,15 @@ namespace RPSLS
             else if (playerOneNumChoice == 2 && (playerTwoNumChoice == 1 || playerTwoNumChoice == 3))
             {
                 playerOne.score++;
+                Console.WriteLine($"{playerOne.gestures[2]} cuts {playerTwo.gestures[1]} and decapitates {playerTwo.gestures[3]}!");
+                Console.WriteLine();
                 Console.WriteLine($"{playerOne.name} wins this round!");
             }
             else if (playerOneNumChoice == 2 && (playerTwoNumChoice == 0 || playerTwoNumChoice == 4))
             {
                 playerTwo.score++;
+                Console.WriteLine($"{playerTwo.name} knows {playerOne.gestures[2]} is no match for {playerTwo.gestures[0]} or {playerTwo.gestures[4]}...");
+                Console.WriteLine();
                 Console.WriteLine($"{playerTwo.name} wins this round!");
             }
             else if (playerOneNumChoice == 2 && playerTwoNumChoice == 2)
@@ -190,11 +203,15 @@ namespace RPSLS
             else if (playerOneNumChoice == 3 && (playerTwoNumChoice == 1 || playerTwoNumChoice == 4))
             {
                 playerOne.score++;
+                Console.WriteLine($"{playerOne.gestures[3]} eats {playerTwo.gestures[1]} and poisons {playerTwo.gestures[4]}!");
+                Console.WriteLine();
                 Console.WriteLine($"{playerOne.name} wins this round!");
             }
             else if (playerOneNumChoice == 3 && (playerTwoNumChoice == 0 || playerTwoNumChoice == 2))
             {
                 playerTwo.score++;
+                Console.WriteLine($"{playerTwo.name} knows {playerOne.gestures[3]} is no match for {playerTwo.gestures[0]} or {playerTwo.gestures[2]}...");
+                Console.WriteLine();
                 Console.WriteLine($"{playerTwo.name} wins this round!");
             }
             else if (playerOneNumChoice == 3 && playerTwoNumChoice == 3)
@@ -204,11 +221,15 @@ namespace RPSLS
             else if (playerOneNumChoice == 4 && (playerTwoNumChoice == 0 || playerTwoNumChoice == 2))
             {
                 playerOne.score++;
+                Console.WriteLine($"{playerOne.gestures[4]} vaporizes {playerTwo.gestures[0]} and smashes {playerTwo.gestures[2]}!");
+                Console.WriteLine();
                 Console.WriteLine($"{playerOne.name} wins this round!");
             }
             else if (playerOneNumChoice == 4 && (playerTwoNumChoice == 1 || playerTwoNumChoice == 3))
             {
                 playerTwo.score++;
+                Console.WriteLine($"{playerTwo.name} knows {playerOne.gestures[4]} is no match for {playerTwo.gestures[1]} or {playerTwo.gestures[3]}...");
+                Console.WriteLine();
                 Console.WriteLine($"{playerTwo.name} wins this round!");
             }
             else if (playerOneNumChoice == 4 && playerTwoNumChoice == 4)
@@ -271,8 +292,7 @@ namespace RPSLS
                 RunGame();
             }
             else
-            {
-                Console.Clear();
+            {   Console.Clear();
                 Console.WriteLine("Hope you Enjoyed the Game!");
             }
         }

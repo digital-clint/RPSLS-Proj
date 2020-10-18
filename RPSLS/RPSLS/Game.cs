@@ -138,8 +138,11 @@ namespace RPSLS
         {
             int playerOneNumChoice = 0;
             playerOneNumChoice = playerOne.ChooseGesture();
+            playerOne.gestureUserChose = playerOne.gestures[playerOneNumChoice];
             int playerTwoNumChoice = 0;
             playerTwoNumChoice = playerTwo.ChooseGesture();
+            playerTwo.gestureUserChose = playerTwo.gestures[playerTwoNumChoice];
+
 
             Console.WriteLine("***********************************************************");
             Console.WriteLine();

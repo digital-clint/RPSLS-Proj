@@ -16,11 +16,8 @@ namespace RPSLS
 
         public override void PlayerName()
         {
-            
                 Console.WriteLine("What will this user's name be?: ");
                 name = Console.ReadLine();
-
-            
         }
 
 
@@ -42,8 +39,7 @@ namespace RPSLS
                 userInputText = Console.ReadLine();
                 isValidNum = int.TryParse(userInputText, out userNumOfGesture);
             }
-            
-           
+ 
             return userNumOfGesture;
         }
 

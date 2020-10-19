@@ -18,14 +18,11 @@ namespace RPSLS
         {
             ListOfGestures();
             score = 0;
-    
         }
 
         
         public void ListOfGestures()
         {
-            
-
             gestures = new List<string>();
             gestures.Add("Rock");
             gestures.Add("Paper");
@@ -36,13 +33,7 @@ namespace RPSLS
 
 
         public abstract void PlayerName();
-        public abstract int ChooseGesture();
-
-
-
-
-
-        
+        public abstract int ChooseGesture(); 
 
     }
 }

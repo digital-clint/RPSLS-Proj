@@ -240,7 +240,6 @@ namespace RPSLS
                 Console.WriteLine($"Woah...it's a TIE! No points awarded this round!");
             }
 
-
         }
 
         public void DisplayWinner()
